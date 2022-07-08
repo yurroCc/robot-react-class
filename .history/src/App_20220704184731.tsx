@@ -1,0 +1,19 @@
+import React from 'react';
+import robots from './mockdata/robots.json'
+import Robot from "./components/robot";
+import styles from './App.module.css'
+function App() {
+  return (
+      <div className={styles.app}>
+          <div className={styles.robotList}>
+              <ul>
+                  {robots.map(r => <Robot id={r.id} name={r.name} email={r.email}/>)}
+              </ul>
+          </div>
+
+      </div>
+
+  );
+}
+
+export default App;
